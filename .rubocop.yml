@@ -1,0 +1,24 @@
+require: 
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - app/channels/**/*
+    - bin/**/*
+    - config.ru
+    - config/**/*
+    - db/schema.rb
+    - db/migrate/*.rb
+    - Rakefile
+    - spec/spec_helper.rb
+    - spec/rails_helper.rb
+
+Style/Documentation:
+  Exclude:
+    - app/controllers/**/*_controller.rb
+    - app/helpers/application_helper.rb
+Rails/HelperInstanceVariable:
+  Exclude:
+    - app/helpers/weather_helper.rb

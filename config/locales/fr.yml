@@ -1,0 +1,9 @@
+fr:
+  enter_location: "Entrez une ville"
+  search: "Cherche"
+  city: "Ville"
+  sunrise: "Lever du soleil"
+  sunset: "Coucher du soleil"
+  weather: "Météo"
+  nodata: "Pas de données"
+  temperature: "Température"

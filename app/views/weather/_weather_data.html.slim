@@ -1,0 +1,23 @@
+#weatherData
+  .column.is-half.is-offset-one-quarter
+    .box
+
+      - if content?(@weather)
+        .content
+          dl
+            dt = t :city
+            dd = name(@weather)
+          dl
+            dt = t :temperature
+            dd = temperature(@weather)
+          dl
+            dt = t :sunrise
+            dd = sunrise(@weather)
+          dl
+            dt = t :sunset
+            dd = sunset(@weather)
+          dl
+            dt = t :weather
+            dd = description(@weather)
+      - else
+        p = t :nodata

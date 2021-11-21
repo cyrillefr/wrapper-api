@@ -1,0 +1,14 @@
+.column.is-half.is-offset-one-quarter
+  .box
+    h3 class='title is-3' Search Form
+
+    = form_with url: search_url do |f|
+      .field
+      = f.label :location, t(:enter_location), class: 'label'
+      .field
+      = f.text_field :location, class: 'input'
+      .field
+      = f.submit t(:search), class: 'button is-primary'
+
+hr
+= render 'weather_data'

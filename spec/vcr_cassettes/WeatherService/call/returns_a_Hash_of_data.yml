@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=a97d2c3022ee4f45fa67643fcdfe45d3&q=London%2Cuk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - openresty
+      date:
+      - Mon, 27 Sep 2021 13:31:01 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '487'
+      connection:
+      - keep-alive
+      x-cache-key:
+      - "/data/2.5/weather?q=london%2cuk"
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-0.1257,"lat":51.5085},"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"base":"stations","main":{"temp":290.26,"feels_like":289.62,"temp_min":288.54,"temp_max":292.14,"pressure":1012,"humidity":61},"visibility":10000,"wind":{"speed":1.34,"deg":247,"gust":6.71},"clouds":{"all":75},"dt":1632749380,"sys":{"type":2,"id":268730,"country":"GB","sunrise":1632722081,"sunset":1632764890},"timezone":3600,"id":2643743,"name":"London","cod":200}'
+    http_version: 
+  recorded_at: Mon, 27 Sep 2021 13:31:01 GMT
+recorded_with: VCR 5.0.0
