@@ -2,29 +2,11 @@
 
 # utilities for weather service
 module WeatherHelper
-  extend Utils
-  def content?(weather)
-    # HTTP codes
-    weather&.fetch('cod', 400) == 200
+  def self.time_hhmmss(str)
+    Time.zone.at(str).strftime('%H:%H:%S')
   end
 
-  def description(weather)
-    weather.dig('weather', 0, 'description').capitalize
-  end
-
-  def sunrise(weather)
-    Utils.time_hhmmss weather.dig('sys', 'sunrise')
-  end
-
-  def sunset(weather)
-    Utils.time_hhmmss weather.dig('sys', 'sunset')
-  end
-
-  def name(weather)
-    weather['name']
-  end
-
-  def temperature(weather)
-    Utils.kelvin_to_cent(weather.dig('main', 'temp'))
+  def self.kelvin_to_cent(kelvin)
+    (kelvin - 273.16).round(2)
   end
 end

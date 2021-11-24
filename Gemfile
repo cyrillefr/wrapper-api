@@ -27,6 +27,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails', '~> 5.0.0'
   gem 'rubocop', require: false
+  gem 'rubocop-performance'
   gem 'rubocop-rails', '~> 2.12', '>= 2.12.4'
   gem 'rubocop-rspec', require: false
   gem 'vcr'
